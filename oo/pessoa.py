@@ -7,7 +7,7 @@ class Pessoa:
     def cumprimentar(self):
         return f'Olá {id(self)}'
 
-
+## criado atributo complexo filhos
 if __name__ == '__main__':
 
     renzo = Pessoa(nome='Renzo')
