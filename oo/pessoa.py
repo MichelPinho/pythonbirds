@@ -1,4 +1,5 @@
 class Pessoa:
+    olhos = 2
     def __init__(self, *filhos, nome=None, idade=44):
         self.idade = idade
         self.nome = nome
@@ -7,7 +8,7 @@ class Pessoa:
     def cumprimentar(self):
         return f'Olá {id(self)}'
 
-## criado atributo complexo filhos
+
 if __name__ == '__main__':
 
     renzo = Pessoa(nome='Renzo')
@@ -18,3 +19,8 @@ if __name__ == '__main__':
     print(michel.idade)
     for filho in michel.filhos:
         print(filho.nome)
+
+    print(michel.olhos)
+    print(renzo.olhos)
+
+
