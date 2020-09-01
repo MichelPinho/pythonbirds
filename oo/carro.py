@@ -21,8 +21,8 @@ a Direção terá a resposabilidade de controlar a direção . Ela oferece os se
 
 Exemplo:
     >>> # Testando motor
-    >>> motor = Motor
-    >>> motor.velocidade()
+    >>> motor = Motor()
+    >>> motor.velocidade
     0
     >>> motor.acelerar()
     >>> motor.velocidade
@@ -115,7 +115,27 @@ class Direcao:
         self.valor = self.rotacao_a_esquerda_dct[self.valor]
 
 class Carro:
-    pass
+    def __init__(self, direcao, motor):
+        self.motor = motor
+        self.direcao = direcao
+
+    def calcular_velocidade(self):
+        return self.motor.velocidade
+
+    def acelerar(self):
+        return self.motor.acelerar()
+
+    def frear(self):
+        return self.motor.frear()
+
+    def calcular_direcao(self):
+        return self.direcao.valor
+
+    def girar_a_direita(self):
+        return self.direcao.girar_a_direita()
+
+    def girar_a_esquerda(self):
+        return self.direcao.girar_a_esquerda()
 
 
 class Motor:
